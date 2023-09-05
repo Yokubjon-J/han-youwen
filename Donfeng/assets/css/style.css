@@ -1,0 +1,117 @@
+:root {
+    --darkPrimary: #141414;
+    --primaryColor: #9FEDEA;
+    --primaryColorDark: #19ADA8;
+    --grayLight: #DCDCDC;
+    --gray: #ECEFF0;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: var(--darkPrimary);
+    color: #fff;
+
+}
+
+body>main {
+    flex: 1 1 auto;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+section.section-white {
+    background: #fff;
+    color: #141414;
+}
+
+h2 {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+h2 span {
+    color: var(--primaryColor);
+}
+
+.dc-navbar {
+    border-bottom: 1px solid var(--grayLight);
+    padding: 1.25rem 2.5rem;
+}
+
+.dc-navbar .nav-link {
+    color: var(--grayLight);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.dc-navbar .nav-link:hover {
+    color: #fff;
+}
+
+.zoom-gallery {
+    display: flex;
+    column-gap: 70px;
+}
+
+.zoom-gallery_img {
+    height: 700px;
+    width: 15%;
+    transition: .3s ease;
+}
+
+.zoom-gallery_img.active {
+    width: 70%;
+}
+
+
+.zoom-gallery:has(:not(.active)) .zoom-gallery_img:not(.active) {
+    width: 33.33%;
+}
+
+
+.zoom-gallery_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.accordion .card {
+    background: transparent;
+}
+
+.contacts-card {
+    border-radius: 0;
+    border: 0;
+}
+
+.contacts-card .card-img {
+    border-radius: 0;
+}
+
+.contacts-card .card-img-overlay {
+    background: rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(66px);
+    padding: 9rem 4.5rem;
+}
+
+.form-control {
+    border-radius: 0;
+    border-width: 0 0 1px 0;
+    background-color: transparent;
+}
+
+.form-control:focus{
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+}
